@@ -18,8 +18,7 @@ app.use(
       "http://localhost:3003",
       "https://oneshotblog.netlify.app",
       "https://main--oneshotblog.netlify.app/",
-    ],
-    credentials: true,
+    ]
   })
 );
 
