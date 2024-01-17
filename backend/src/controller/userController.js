@@ -3,7 +3,7 @@ import cloudinary from "cloudinary";
 import ErrorHandler from "../utils/errorHandler.js";
 import { sendToken } from "../utils/sendToken.js";
 import { catchAsyncError } from "../middlewares/catchTryMiddleware.js";
-import { userCollection } from "../models/UserMOdel.js";
+import { userCollection } from "../models/UserModel.js";
 import bcrypt from "bcrypt";
 
 export const register = catchAsyncError(async (req, res, next) => {
