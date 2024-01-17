@@ -1,4 +1,4 @@
-import { userCollection } from "../models/UserMOdel.js";
+import { userCollection } from "../models/UserModel.js";
 import ErrorHandler from "../utils/errorHandler.js";
 import { catchAsyncError } from "./catchTryMiddleware.js";
 import jwt, { decode } from "jsonwebtoken";
