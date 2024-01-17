@@ -23,6 +23,14 @@ app.use(
   })
 );
 
+// Add CORS headers
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -32,5 +40,6 @@ app.use("/api", userRouter);
 app.use("/api", blogRouter);
 
 app.use(errorMiddleware);
+
 
 export default app;
