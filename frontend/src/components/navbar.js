@@ -1,9 +1,12 @@
 import React from "react";
-import { NavLink, Navigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useOwnStore } from "../store/store";
 import toast from "react-hot-toast";
+import ArrowNavigation from "./arro";
 const Navbar = () => {
   const { user, setUser } = useOwnStore();
+  const { navigate } = useNavigate();
+
 
 
 
@@ -13,11 +16,11 @@ const Navbar = () => {
     localStorage.clear();
     toast.success("Logged out successfully");
     console.log("logoutHandler");
-    Navigate("/login");
+    navigate("/login");
 
   };
   return (
-    <nav id="header" className="fixed gradient w-full z-100 top-0 text-white">
+    <nav id="header" className="gradient w-full top-0 text-white">
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 px-12">
         <div className="pl-4 flex items-center">
           <NavLink
@@ -111,6 +114,7 @@ const Navbar = () => {
         </div>
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
+      <ArrowNavigation />
     </nav>
   );
 };

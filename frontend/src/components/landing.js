@@ -6,6 +6,7 @@ const Landing = () => {
   return (
     <>
       <div class="gradient pt-24">
+
         <div class="container px-12 mx-auto flex flex-wrap flex-row md:flex-row items-center justify-between w-full">
           <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left px-3">
             <h1 class="my-4 text-5xl font-bold leading-tight text-white">

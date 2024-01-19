@@ -5,6 +5,7 @@ import Land from "./components/landing.js";
 import { Login } from "./pages/login.js";
 import { Register } from "./pages/register.js";
 import { CreateBlog } from "./pages/createBlog.js";
+import BlogPage from "./pages/blog.js";
 
 // import About from './components/About';
 // import Contact from './components/Contact';
@@ -20,6 +21,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/create-blog" element={<CreateBlog />} />
+            <Route path="/blog" element={<BlogPage />} />
           </Routes>
         </Router>
       </div>
